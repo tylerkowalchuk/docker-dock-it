@@ -5,6 +5,7 @@ Execute the docker-compose.yml file:
 ```shell
 docker compose up -d
 ```
+Then open in browser: <http://localhost/>
 
 ## Rebuild environment ##
 After changing a "Dockerfile", you must rebuild the image using "docker compose build" or:
