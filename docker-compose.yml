@@ -1,0 +1,72 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb:${MARIADB_VERSION}
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      # or
+      # MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      # named volumes:
+      #  - db:/var/lib/mysql
+      # local volumes
+      - ./db/data:/var/lib/mysql
+      - ./conf/mysql:/etc/mysql/conf.d
+      - ./db/init:/docker-entrypoint-initdb.d
+
+  wordpress:
+    image: wordpress:${WORDPRESS_VERSION}-php${PHP_VERSION}-apache
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: ${DB_USER}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${DB_NAME}
+      WORDPRESS_DEBUG: ${WP_DEBUG}
+      WORDPRESS_TABLE_PREFIX: ${WP_TABLE_PREFIX}
+      WORDPRESS_CONFIG_EXTRA: define( 'WP_AUTO_UPDATE_CORE', false );
+    volumes:
+      - ./wordpress:/var/www/html
+#      - ./plugins:/var/www/html/wp-content/plugins
+#      - ./themes:/var/www/html/wp-content/themes
+      - ./conf/php/php.ini:/usr/local/etc/php/conf.d/php.ini
+
+  pma:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=${DB_USER}
+      - PMA_PASSWORD=${DB_PASSWORD}
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - 1025:1025 # smtp server
+      - 8025:8025 # web ui
+
+  wpcli:
+    depends_on:
+      - wordpress
+    image: wordpress:cli
+    user: 33:33 # use same user-id as WordPress container
+    command: tail -f /dev/null # keep container running
+    volumes:
+      - ./wordpress:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: ${DB_USER}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${DB_NAME}
+
+# named volumes:
+# volumes:
+#   db:
