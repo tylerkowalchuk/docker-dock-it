@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  db:
+    image: "mariadb:latest"
+    restart: "always"
+    volumes:
+      # without volumes, data would be reset everytime
+      # named volumes:
+      # - db:/var/lib/mysql
+      # local volumes
+      #- ./conf/mysql:/etc/mysql/conf.d
+      #- ./db/data:/var/lib/mysql
+      - ./db/init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: "supersecret"
+      MYSQL_DATABASE: "world"
+      MYSQL_USER: "example"
+      MYSQL_PASSWORD: "example"
+
+  web:
+    # build specifies the location of a custom Dockerfile
+    build: ./web
+    restart: "always"
+    depends_on:
+      - db
+    ports:
+      - 80:80
+    volumes:
+      # without volumes, data would be reset everytime
+      - ./conf/php/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./web/html:/var/www/html
+    environment:
+      MYSQL_HOST: "db"
+      MYSQL_DATABASE: "world"
+      MYSQL_USER: "example"
+      MYSQL_PASSWORD: "example"
+
+# named volumes:
+#volumes:
+#  db:
