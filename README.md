@@ -4,10 +4,14 @@ Start by updating the remote url to your own repo:
 ```shell
 git remote set-url origin https://your-git-repo/new-repository.git
 ```
+Push it and check GitHub.
+```shell
+git push
+```
 After opening one of the starter branches, view the README for further instructions.
 
 
-## Two Starter Branches:
+## Two Starter Branches
 ### PHP Demo
 ```shell
 git checkout php-starter
