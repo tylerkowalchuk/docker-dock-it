@@ -6,7 +6,7 @@ cp -n .env.example .env
 ```
 ... and update variables. 
 
-You should also create a __separate mount/volume__ to create a new database.
+You should also create a __separate mount/volume__ to create a new database unless you have backup/init scripts setup.
 
 ## Launch environment
 
@@ -45,8 +45,7 @@ docker exec -it docker-dock-it-wpcli-1 bash
 ```
 
 ## Todo
-1. Create a new branch, commit, push.
-2. Test the site with different versions of PHP/WP.
+1. Test the site with different versions of PHP/WP.
    1. Stop containers.
    2. Update .env file.
    3. Reset WordPress files.
@@ -59,7 +58,7 @@ docker exec -it docker-dock-it-wpcli-1 bash
    5. Start containers and run WP CLI commands.
    6. Try PHP-7.3 and WP-5.8 (Fatal error)
    7. Try PHP 8.1 and WP-6.0 (Deprecated error)
-3. Modify some content and create new backup.
+2. Modify some content and create new backup.
 
 ## Lab
 Todo
