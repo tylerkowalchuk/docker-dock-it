@@ -45,8 +45,21 @@ docker exec -it docker-dock-it-wpcli-1 bash
 ```
 
 ## Todo
-What are we going to do in class?
-Modify some content and create new backup.
+1. Create a new branch, commit, push.
+2. Test the site with different versions of PHP/WP.
+   1. Stop containers.
+   2. Update .env file.
+   3. Reset WordPress files.
+      ```shell
+      rm -rf wordpress/
+      git checkout HEAD wordpress
+      ```
+      (Discuss how this would be different with separate mount points for plugins, themes, etc)
+   4. Reset WordPress database (optional).
+   5. Start containers and run WP CLI commands.
+   6. Try PHP-7.3 and WP-5.8 (Fatal error)
+   7. Try PHP 8.1 and WP-6.0 (Deprecated error)
+3. Modify some content and create new backup.
 
 ## Lab
 Todo
