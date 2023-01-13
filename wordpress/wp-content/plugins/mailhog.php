@@ -11,7 +11,7 @@
 // set from email since "wordpress@localhost" is an invalid domain
 add_filter( 'wp_mail_from', fn($email) => is_email($email) ? $email : 'wordpress@localhost.dev' );
 
-// < php 8.0
+// < php 7.4
 //add_filter( 'wp_mail_from', function($email){
 //	return is_email($email) ? $email : 'wordpress@localhost.dev';
 //});
