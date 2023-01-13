@@ -11,13 +11,18 @@ git push
 After opening one of the starter branches, view the README for further instructions.
 
 
-## Two Starter Branches
+## Starter Branches
 ### PHP Demo
 ```shell
 git checkout php-starter
 ```
 
 ### WordPress Demo
+```shell
+git checkout wp-starter
+```
+
+### WordPress Author Site
 ```shell
 git checkout wp-starter
 ```
