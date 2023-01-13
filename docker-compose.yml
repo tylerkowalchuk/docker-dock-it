@@ -13,9 +13,9 @@ services:
       # MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       # named volumes:
-      #  - db:/var/lib/mysql
+      - db-wp-starter:/var/lib/mysql
       # local volumes
-      - ./db/data:/var/lib/mysql
+      #- ./db/data:/var/lib/mysql
       - ./conf/mysql:/etc/mysql/conf.d
       - ./db/init:/docker-entrypoint-initdb.d
 
@@ -68,5 +68,5 @@ services:
       WORDPRESS_DB_NAME: ${DB_NAME}
 
 # named volumes:
-# volumes:
-#   db:
+volumes:
+   db-wp-starter:
