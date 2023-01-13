@@ -47,7 +47,8 @@ docker exec -it docker-dock-it-wpcli-1 bash
 
 ## Lab
 1. Update PHP to version 8.1. Confirm this worked by visiting the "Site Health" info tab.
-2. Using the following [article](https://www.codeinwp.com/blog/wp-cli/) 
+2. Update PHP config to allow 50MB uploads, increase PHP memory limit to 256MB, and increase max execution time to 5 minutes. Start [here](https://www.geeksforgeeks.org/php-php-ini-file-configuration/) and do some googling. Confirm this worked by visiting the "Site Health" info tab and uploading an image larger than 2MB.
+3. Using the following [article](https://www.codeinwp.com/blog/wp-cli/) 
    and [WP CLI docs](https://developer.wordpress.org/cli/commands/), 
    perform the following using the __WP CLI__.
 
