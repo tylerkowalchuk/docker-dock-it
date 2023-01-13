@@ -24,5 +24,5 @@ git checkout wp-starter
 
 ### WordPress Author Site
 ```shell
-git checkout wp-starter
+git checkout wp-author-site
 ```
