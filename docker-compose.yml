@@ -2,7 +2,8 @@ version: "3"
 
 services:
   db:
-    image: "mariadb:latest"
+    image: "mariadb:10.10"
+
     restart: "always"
     volumes:
       # without volumes, data would be reset everytime
@@ -35,6 +36,17 @@ services:
       MYSQL_DATABASE: "world"
       MYSQL_USER: "example"
       MYSQL_PASSWORD: "example"
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      # host port : container port
+      - "8080:80"
+    environment:
+      PMA_HOST: "db"
+      PMA_USER: "example"
+      PMA_PASSWORD: "example"
 
 # named volumes:
 #volumes:
