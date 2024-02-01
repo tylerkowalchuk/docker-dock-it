@@ -12,14 +12,14 @@ include "includes/header.php"; ?>
 <div class="container-md">
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 d-flex justify-content-center">
         <div class="col">
-            <a href="perfumery.php"><div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('../../IWD/docker-dock-it/web/html/images/perfumery-img.png');">
+            <a href="perfumery.php"><div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('images/perfumery-img.png');">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                     <h2 id="cardTitle1" class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-decoration-none">Visit the Perfumery</h2>
                 </div>
             </div>
         </div></a>
         <div class="col">
-            <a href="perfumery.php"><div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('../../IWD/docker-dock-it/web/html/images/customers_img.png');">
+            <a href="perfumery.php"><div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('images/customers_img.png');">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 id="cardTitle2" class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-decoration-none">Customers</h2>
                     </div>
@@ -32,7 +32,7 @@ include "includes/header.php"; ?>
 <div class="container-sm">
 <div class="card-group">
     <div class="card">
-        <img src="../../IWD/docker-dock-it/web/html/images/topNotes.png" class="card-img-top" alt="orange growing on tree">
+        <img src="images/topNotes.png" class="card-img-top" alt="orange growing on tree">
         <div class="card-body">
             <h5 class="card-title">Top Notes</h5>
             <p class="card-text">Top notes represent the first impression. They may not be the
@@ -47,7 +47,7 @@ include "includes/header.php"; ?>
         </div>
     </div>
     <div class="card">
-        <img src="../../IWD/docker-dock-it/web/html/images/middleNotes.png" class="card-img-top" alt="pink flowers">
+        <img src="images/middleNotes.png" class="card-img-top" alt="pink flowers">
         <div class="card-body">
             <h5 class="card-title">Middle Notes</h5>
             <p class="card-text">The heart notes start to make an appearance just before the
@@ -62,7 +62,7 @@ include "includes/header.php"; ?>
         </div>
     </div>
     <div class="card">
-        <img src="../../IWD/docker-dock-it/web/html/images/baseNotes.png" class="card-img-top" alt="wood with greenery">
+        <img src="images/baseNotes.png" class="card-img-top" alt="wood with greenery">
         <div class="card-body">
             <h5 class="card-title">Base Notes</h5>
             <p class="card-text">Where the top notes make the initial impression, the base notes are

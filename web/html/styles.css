@@ -1,11 +1,11 @@
 body{
-    background-image: url("../../IWD/docker-dock-it/web/html/images/background.png");
+    background-image: url("images/background.png");
     background-repeat: repeat-x;
     background-color: #1F031F;
 }
 
 #topImage {
-    background-image: url("../../IWD/docker-dock-it/web/html/images/topBanner.png");
+    background-image: url("images/topBanner.png");
     background-repeat: no-repeat;
     width: 900px;
     height: 400px;
