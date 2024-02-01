@@ -5,7 +5,7 @@ services:
     image: "mariadb:latest"
     restart: "always"
     volumes:
-      # without volumes, data would be reset everytime
+      # without volumes, data would be reset every time
       # named volumes:
       # - db:/var/lib/mysql
       # local volumes
@@ -25,9 +25,9 @@ services:
     depends_on:
       - db
     ports:
-      - 80:80
+      - "80:80"
     volumes:
-      # without volumes, data would be reset everytime
+      # without volumes, data would be reset every time
       - ./conf/php/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ./web/html:/var/www/html
     environment:
@@ -47,5 +47,5 @@ services:
       PMA_PASSWORD: ${DB_PASS}
 
 # named volumes:
-#volumes:
+# volumes:
 #  db:
