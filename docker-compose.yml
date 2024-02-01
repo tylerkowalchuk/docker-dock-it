@@ -5,12 +5,12 @@ services:
     image: mariadb:${MARIADB_VERSION}
     restart: always
     environment:
-      MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${DB_NAME}
+      MARIADB_USER: ${DB_USER}
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       # or
-      # MYSQL_RANDOM_ROOT_PASSWORD: '1'
+      # MARIADB_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       # named volumes:
       - db-wp-starter:/var/lib/mysql
