@@ -3,7 +3,6 @@ version: '3'
 services:
   db:
     image: mariadb:${MARIADB_VERSION}
-    restart: always
     environment:
       MARIADB_DATABASE: ${DB_NAME}
       MARIADB_USER: ${DB_USER}
@@ -39,7 +38,6 @@ services:
 
   pma:
     image: phpmyadmin:latest
-    restart: always
     ports:
       - 8081:80
     environment:
