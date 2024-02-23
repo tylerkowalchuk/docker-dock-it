@@ -3,7 +3,6 @@ version: "3"
 services:
   db:
     image: "mariadb:latest"
-    restart: "always"
     volumes:
       # without volumes, data would be reset everytime
       # named volumes:
@@ -21,7 +20,6 @@ services:
   web:
     # build specifies the location of a custom Dockerfile
     build: ./web
-    restart: "always"
     depends_on:
       - db
     ports:
