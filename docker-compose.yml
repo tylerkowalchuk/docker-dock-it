@@ -46,7 +46,7 @@ services:
       - PMA_PASSWORD=${DB_PASSWORD}
 
   mailhog:
-    image: mailhog/mailhog:latest
+    image: jcalonso/mailhog:latest
     ports:
       - 1025:1025 # smtp server
       - 8025:8025 # web ui
