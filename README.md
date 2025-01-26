@@ -2,7 +2,7 @@
 
 ## Launch environment
 
-Execute the docker-compose.yml file: 
+Execute the docker-compose.yml file AFTER completing the setup: 
 ```shell
 docker compose up -d
 ```
@@ -25,18 +25,27 @@ or login via the terminal:
 ```shell
 docker exec -it docker-dock-it-wpcli-1 bash
 ```
+or open the WPCLI terminal in Docker Desktop
 
-## Todo
-1. Create environment file and update variables.
+## Setup
+1. Create a new branch to keep this "starter" clean.
+2. Review and update the docker-compose file. Make sure to change the database volume for each different site.
+3. Create environment file and update variables.
     ```shell
    cp .env.example .env
     ```
-2. Setup WordPress @ <http://localhost/>
-3. Explore MailHog:
+4. Execute the docker-compose.yml the .env file:
+   ```shell
+   docker compose up -d
+   ```
+5. Setup WordPress @ <http://localhost/>
+
+## Demo
+1. Explore MailHog:
    * Activate MailHog plugin.
    * Create a new user to catch emails.
    * View emails @ <http://localhost:8025/>
-4. Explore WP CLI
+2. Explore WP CLI
    ```
    wp --help
    wp plugin --help
@@ -44,9 +53,11 @@ docker exec -it docker-dock-it-wpcli-1 bash
    wp plugin delete hello akismet
    wp plugin install health-check query-monitor loco-translate --activate
    ```
+3. Test for MailHog bugs in PHP 7.4 
 
 ## Lab
-1. Update PHP to version 8.1. Confirm this worked by visiting the "Site Health" info tab.
+Add the following to today's demo
+1. Update PHP to version 8.2. Confirm this worked by visiting the "Site Health" info tab.
 2. Update PHP config to allow 50MB uploads, increase PHP memory limit to 256MB, and increase max execution time to 5 minutes. Start [here](https://www.geeksforgeeks.org/php-php-ini-file-configuration/) and do some googling. Confirm this worked by visiting the "Site Health" info tab and uploading an image larger than 2MB.
 3. Using the following [article](https://www.codeinwp.com/blog/wp-cli/) 
    and [WP CLI docs](https://developer.wordpress.org/cli/commands/), 
