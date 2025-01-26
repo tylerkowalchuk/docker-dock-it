@@ -53,7 +53,6 @@ or open the WPCLI terminal in Docker Desktop
    wp plugin delete hello akismet
    wp plugin install health-check query-monitor loco-translate --activate
    ```
-3. Test for MailHog bugs in PHP 7.4 
 
 ## Lab
 Add the following to today's demo
