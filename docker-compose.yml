@@ -1,6 +1,7 @@
 # named volumes:
-#volumes:
-#  world-db:
+#name volume must be unique to project
+volumes:
+  world-db:
 
 services:
   db:
@@ -8,7 +9,7 @@ services:
     volumes:
       # without volumes, data would be reset everytime
       # named volumes:
-      # - world-db:/var/lib/mysql
+      - world-db:/var/lib/mysql
       # local volumes
       #- ./conf/mysql:/etc/mysql/conf.d
       #- ./db/data:/var/lib/mysql
@@ -25,6 +26,7 @@ services:
     depends_on:
       - db
     ports:
+      # host: container
       - 80:80
     volumes:
       # without volumes, data would be reset everytime
@@ -35,4 +37,13 @@ services:
       MYSQL_DATABASE: "world"
       MYSQL_USER: "example"
       MYSQL_PASSWORD: "example"
+
+  phpmyadmin:
+      image: phpmyadmin
+      ports:
+       - 8080:80
+      environment:
+       - PMA_HOST=db
+       - PMA_USER=example
+       - PMA_PASSWORD=example
 
