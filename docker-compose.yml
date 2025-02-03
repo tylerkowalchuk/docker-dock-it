@@ -17,8 +17,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "supersecret"
       MYSQL_DATABASE: "world"
-      MYSQL_USER: "example"
-      MYSQL_PASSWORD: "example"
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
 
   web:
     # build specifies the location of a custom Dockerfile
@@ -35,8 +35,8 @@ services:
     environment:
       MYSQL_HOST: "db"
       MYSQL_DATABASE: "world"
-      MYSQL_USER: "example"
-      MYSQL_PASSWORD: "example"
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
 
   phpmyadmin:
       image: phpmyadmin
@@ -44,6 +44,6 @@ services:
        - 8080:80
       environment:
        - PMA_HOST=db
-       - PMA_USER=example
-       - PMA_PASSWORD=example
+       - PMA_USER=${DB_USERNAME}
+       - PMA_PASSWORD=${DB_PASSWORD}
 
