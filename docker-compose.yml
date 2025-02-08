@@ -1,7 +1,7 @@
 # named volumes:
 #unique for this project
 volumes:
-  world-db:
+  adopt-db:
 
 services:
   db:
@@ -9,7 +9,7 @@ services:
     volumes:
       # without volumes, data would be reset everytime
       # named volumes:
-      - world-db:/var/lib/mysql
+      - adopt-db:/var/lib/mysql
       # local volumes
       #- ./conf/mysql:/etc/mysql/conf.d
       #- ./db/data:/var/lib/mysql
@@ -33,7 +33,7 @@ services:
       - ./conf/php/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ./web/html:/var/www/html
     environment:
-      MYSQL_HOST: "localhost"
+      MYSQL_HOST: "db"
       MYSQL_DATABASE: "adopt_pet"
       MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
