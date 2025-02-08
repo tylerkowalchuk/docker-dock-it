@@ -1,0 +1,622 @@
+*{
+    margin:0;
+    padding:0;
+    border: none;
+}
+
+:root{
+    --color-one: #628c8a;
+    --color-two:#F1F2EE;
+    --color-three: #BCC5CA;
+    --general-black: #000;
+    --general-gray: #f3f3f3;
+}
+
+/******** Font **********/
+
+body{
+    font-family: "bagatela", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/*****Navigation*****/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: var(--general-gray);
+    border-bottom: 3px solid var(--color-one);
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 2em;
+    font-weight: 600;
+    font-style: normal;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--general-black);
+    text-decoration: none;
+
+}
+
+
+
+/********** Footer *****************/
+footer{
+    background-color: var(--general-gray);
+    border-top: 3px solid var(--color-one);
+    
+
+}
+
+.main-box2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-logo{
+    max-height: 100px;
+    width: auto;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-icons i {
+    font-size: 2em;
+    color: var(--general-black);
+}
+
+
+/*****Banner*****/
+
+.puppy {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.puppy-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.puppy-text {
+    flex: 1 1 70%;
+    text-align: left;
+}
+
+.puppy-text h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.puppy-text h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.puppy-text button {
+    background-color: var(--color-one);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.puppy-text button:hover {
+    background-color: var(--color-one);
+}
+
+.puppy-image {
+    flex: 1 1 20%;
+    z-index: 1;
+    text-align: center;
+    position: relative;
+}
+
+.puppy-image img {
+    max-width: 100%;
+    height: 300px;
+    display: block;
+}
+
+.puppy-image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: var(--color-one);
+    z-index: -1;
+}
+
+/*****Home Page*****/
+.main-box{
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+    margin:0 auto;
+    padding: 10px 20px;
+    background-color: var( --color-two);
+
+
+
+}
+
+.main-box-image {
+    width: 200px;
+    height: 180px;
+    padding: 15px;
+    align-content: center;
+}
+
+.content {
+    width: 40%;
+    height: 300px;
+    font-size: 2em;
+    padding:30px;
+    background-color: var(--color-one);
+    color: #fff;
+    margin:15px;
+}
+
+.display-box {
+    width: 30%;
+    margin:20px 10px 20px 80px;
+    height: 350px;
+    padding:20px;
+    align-content: center;
+
+
+}
+
+.display-box > h2 {
+    font-size: 2em;
+    text-align: center;
+    background-color: var(--color-one);
+    padding: 10px;
+    color: #fff;
+
+}
+
+.display-box >p {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    padding: 5px;
+    text-align: center;
+}
+
+img{
+    width: 200px;
+    height: 250px;
+}
+
+/*********Adopt Page****/
+
+.adopt-list{
+
+    min-width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0.5rem;
+    margin: 25px 0;
+    padding:20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+
+
+}
+
+.adopt-list thead tr {
+    background-color: var(--color-one);
+    color: #fff;
+    text-align: left;
+    font-size: 1.5em;
+    text-decoration: none;
+
+}
+
+.adopt-list thead tr a{
+    text-decoration: none;
+    color: #fff;
+
+
+}
+
+
+.adopt-list thead tr a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+
+
+
+}
+
+.adopt-list th, .adopt-list td {
+    padding: 12px 15px;
+}
+
+
+.adopt-list td a {
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.adopt-list td a:hover {
+    font-size: 1.1em;
+
+}
+
+.adopt-list tbody tr {
+    border-bottom: 1px solid var(--color-one);
+}
+
+.adopt-list tbody tr:nth-of-type(even){
+    background-color: var(--color-three);
+
+}
+
+.adopt-pet{
+    font-size: 3em;
+    padding:20px;
+    margin:15px;
+    text-align: center;
+}
+
+.adopt-content p {
+    font-size: 1.3em;
+}
+
+.pet-images{
+
+    margin:10px;
+    padding:20px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--color-one);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.pet-images div{
+    margin:10px;
+    padding:20px;
+   text-align: center;
+
+}
+
+
+/*******Pet Info******/
+
+.pet-information{
+    display: flex;
+    width: 90%;
+    padding:20px;
+    margin:50px auto;
+    font-size: 1.2em;
+    background-color: var( --color-two);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    line-height: 1.5em;
+}
+
+
+
+.pet-info{
+    width: 40%;
+    display: grid;
+    margin:10px auto;
+    padding:15px;
+}
+
+.contact-us{
+    width: 40%;
+    display: grid;
+    margin:10px auto;
+    padding:20px;
+}
+
+.petAdoption {
+    font-size: 3em;
+    text-align: center;
+    padding: 30px;
+}
+
+/******Lost Pets*********/
+.lostList{
+
+    min-width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0.5rem;
+    margin: 25px 0;
+    padding:15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+
+
+}
+
+.lostList thead tr {
+    background-color: var(--color-one);
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+
+}
+
+.lostList thead tr a{
+    text-decoration: none;
+    color: #fff;
+
+
+}
+
+
+.lostList thead tr a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+
+
+
+}
+
+.lostList th, .adopt-list td {
+    padding: 12px 15px;
+}
+
+
+.lostList td a {
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.lostList td a:hover {
+    font-size: 1.1em;
+
+}
+
+.lostList tbody tr {
+    border-bottom: 1px solid var(--color-one);
+}
+
+.lostList tbody tr:nth-of-type(even){
+    background-color: var(--color-three);
+
+}
+
+/****Button****/
+
+.report-lost-btn {
+    background-color: transparent;
+    border: 1px solid var(--color-one);
+    color: #fff;
+    font-weight: bolder;
+    line-height: 24px;
+    padding: 16px 23px;
+    position: absolute;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+                                                   }
+
+.report-lost-btn:hover,
+.report-lost-btn:active {
+    outline: 0;
+}
+
+.report-lost-btn:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color:#000;
+}
+
+.report-lost-btn:before {
+    background-color: #385F71;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -8px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+}
+
+.report-lost-btn:hover:before {
+    background-color: #7F9183;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+    .report-lost-btn {
+        padding: 16px 32px;
+    }
+}
+
+/*****Form*********/
+
+form{
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    border: 4px solid hsl(0, 0%, 90%);
+    display: grid;
+    margin:10px auto;
+    width: 60%;
+    align-items: center;
+}
+
+form > div{
+    grid-column: span 7;
+
+}
+
+textarea, input[type="text"], input[type="date"]{
+    border: 1px solid #000;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    font-size: 1em;
+    display: block;
+    box-sizing: border-box;
+    width: 60%;
+    padding: 1em .75em;
+
+}
+
+label {
+
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    font-size: 1.3em;
+    display: block;
+    box-sizing: border-box;
+    width: 60%;
+    padding: .1em .75em;
+
+}
+
+
+
+/*****Pagination****/
+
+.pagination {
+    display: inline;
+
+}
+
+
+.disabled > .page-link{
+    color: var(--color-three);
+    cursor: default;
+    pointer-events: none;
+}
+
+.page-link{
+    position: relative;
+    padding:12px;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: var(--color-two);
+    color:#000;
+    font-weight: bold;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+/*****Buttons*****/
+
+
+.update-btn{
+    width: 40%;
+    margin: 0 auto;
+    background-color: var(--color-one);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 8px 0;
+    text-decoration: none;
+    text-align: center;
+    user-select: none;
+
+
+
+}
+
+.update-btn:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+
+/****Found Pet*****/
+
+.found-pet{
+    width: 90%;
+    margin:30px auto;
+
+}
+
+.found-content {
+    width: 80%;
+    margin:10px auto;
+    text-align: center;
+    font-size: 1.5em;
+
+}
+
+.found-btn{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin:20px;
+}
+
+
+
+.main-location, .main-hours,.main-contact{
+    line-height: 1.5em;
+
+}
+
+
+
+
+
+ .logo{
+     max-height: 150px;
+     width: auto;
+     padding: 10px;
+     display: flex;
+
+ }
