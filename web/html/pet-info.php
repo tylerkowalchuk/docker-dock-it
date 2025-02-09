@@ -24,11 +24,9 @@ include "includes/header.php"
         $petID = $_GET['petID'] ?? '';
 
 
-        $query = "SELECT *
-                FROM dog_breed
-                JOIN adopt_pets ON dog_breed.dog_breed_id = adopt_pets.petID
-                JOIN breed ON dog_breed.breed_id = breed.breed_id
-                WHERE adopt_pets.petID = '$petID'";
+        $query = "SELECT adopt_pets.*
+          FROM adopt_pets
+          WHERE adopt_pets.petID = '$petID'";
 
         $result = (@mysqli_query($db, $query)) or die('You have an error in query');
 
@@ -48,7 +46,6 @@ include "includes/header.php"
 
 
             echo '<p><b> Pet Name:</b>' .$pet['Name'] . ' </p>';
-            echo '<p> <b>Breed:</b>' .$pet['breed'] . ' </p>';
             echo  '<p> <b>Sex:</b> '. $pet['Sex'] .  '</p>';
             echo ' <p> <b>Birthday:</b> ' . $pet['Birthday'] .'</p>';
             echo  '<p> <b>Description</b> : '. $pet['Description']. '</p>';
