@@ -37,6 +37,7 @@ CREATE TABLE `adopt_pets` (
   `Status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+
 --
 -- Dumping data for table `adopt_pets`
 --
