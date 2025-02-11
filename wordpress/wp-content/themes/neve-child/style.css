@@ -1,0 +1,266 @@
+/*
+Theme Name:   neve-child
+Description:  Neve Child Theme
+Author:       Mariana Marlis
+Template:     neve
+Version:      1.0.0
+Text Domain:  neve-child
+*/
+@import "https://fonts.adobe.com/fonts/geller-sans-variable#fonts-section";
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@700&family=Lato:wght@300;400&family=Noto+Sans:wght@600&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url("https://use.typekit.net/mkv5vkx.css");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Patrick+Hand&display=swap');
+
+
+p.site-title {
+    display: none;
+}
+
+/*h1 {*/
+
+/*    text-align: center;*/
+/*}*/
+.nav-ul:not(.menu-mobile):not(.neve-mega-menu) > li > .wrap > a {
+    padding-top: 1px;
+    font-size: 1.8rem;
+}
+
+.nv-page-title-wrap .nv-big-title .nv-page-title, h1 {
+    /*font-family: "geller-sans-variable", sans-serif;*/
+    /*text-align: center;*/
+
+}
+
+p {
+
+    font-family: "noto", sans-serif;
+    font-size: 1.2em;
+}
+
+.nav-ul {
+    display: flex;
+    margin: 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-family: "sofia-pro", sans-serif;
+
+}
+
+
+#secondary {
+    max-width: 100%;
+    width: 120px;
+    height: 150px;
+    /*overflow: hidden;*/
+}
+
+img {
+    max-width: 100%;
+    width: 120px;
+    height: 150px;
+    overflow: hidden;
+}
+
+
+.hfg_header.site-header {
+    box-shadow: none !important;
+}
+
+/*.wrapper.header.header-grid.row--wrapper.header--row.header-main.hide-on-mobile. layout-fullwidth.nv-navbar.header--row {*/
+/*    display: none;*/
+/*    justify-content: center;*/
+/*}*/
+
+.row.row--wrapper {
+    justify-content: center;
+}
+
+
+
+
+aside#secondary div p.widget-title {
+    /*font-size: 2em;*/
+}
+
+.page .neve-main {
+    /*background-color: #585854;*/
+}
+
+/*Logo*/
+.site-logo img {
+    height: 139px;
+    width: 307px !important;
+}
+
+/*Random Review*/
+
+
+.review-card {
+    max-width: 600px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #bfd8dd, #79cfd6);
+    margin: 40px 0;
+    padding: 20px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Patrick Hand', cursive;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.book-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 150px;
+}
+
+.book-image img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-title h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.review-content {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.rating-stars {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    /*color: #f39c12;*/
+    /*background: #ffffff;*/
+    padding: 5px 30px;
+    /*border-radius: 12px;*/
+    /*box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);*/
+}
+
+.speech-bubble {
+    /*background: #ffffff;*/
+    /*border-radius: 15px;*/
+    margin-top: 30px;
+    padding: 15px;
+    display: inline-block;
+    font-size: 16px;
+    color: #444;
+    font-family: 'Baloo 2', cursive;
+    /*box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);*/
+    max-width: 100%;
+    text-align: left;
+}
+
+.review-card:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease-in-out;
+}
+
+/*review block*/
+
+.eb-row-xkqfz.eb-row-root-container > .eb-row-wrapper > .eb-row-inner {
+    /*background-color: #585854!important;*/
+}
+
+ul.page-numbers a {
+    background: none !important;
+}
+
+ul.page-numbers .current {
+    background-color: #ae0b1e !important;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    /*background: #fff;*/
+    color: #666;
+    text-align: center;
+}
+
+.has-nv-site-bg-background-color {
+}
+
+.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+    background-color: #206ab9;
+}
+
+/* Reader's block- Homepage */
+.wp-block-columns.reader_block.has-nv-site-bg-background-color.has-background.is-layout-flex.wp-container-core-columns-is-layout-2.wp-block-columns-is-layout-flex {
+    padding: 0 20%;
+}
+
+/* Recent books widget*/
+.books-widget {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.books-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.books-widget li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.books-widget li:last-child {
+    border-bottom: none;
+}
+
+.books-widget img {
+    width: 70px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.books-widget a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.books-widget a:hover {
+    color: #0073aa;
+}
+
+.root-eb-column-csiqd, .root-eb-column-ci0o0, .eb-column-wmqfb.eb-column-wrapper > .eb-column-inner > * {
+    background-color: #F7F7F2;
+}
