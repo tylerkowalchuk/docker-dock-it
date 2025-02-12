@@ -20,6 +20,7 @@
 /wordpress/wp-content/plugins/*
 /wordpress/wp-content/themes/*
 
+
 # … except our stuff.
 !/wordpress/wp-content/plugins/fp-author-publisher
 !/wordpress/wp-content/themes/finalproject2023
