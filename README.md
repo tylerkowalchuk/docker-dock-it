@@ -20,7 +20,11 @@ docker compose up -d
 docker exec -it dock-it-author-site-wpcli-1 bash -c " 
 wp plugin delete hello akismet ; 
 wp plugin install book-plugin --version=2.0.3 --activate
-wp plugin install health-check query-monitor everest-forms --activate ;  
+wp plugin install health-check query-monitor everest-forms --activate ;
+wp plugin install disable-comments --activate ;
+wp plugin install query-monitor --activate ;
+wp plugin install wordpress-importer --activate ;
+wp plugin install essential-blocks --activate ;
 wp plugin activate mailhog ;
 wp theme install neve ;
 wp theme activate neve-child ;
