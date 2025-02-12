@@ -22,6 +22,7 @@ wp plugin delete hello akismet ;
 wp plugin install book-plugin --version=2.0.3 --activate
 wp plugin install health-check query-monitor everest-forms --activate ;  
 wp plugin activate mailhog ;
+wp theme install neve ;
 wp theme activate neve-child ;
 wp theme delete twentytwentythree twentytwentyfour twentytwentyfive;"
 ```
